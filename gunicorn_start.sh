@@ -11,7 +11,7 @@ echo "Starting $NAME as `whoami`"
 
 # Activate the virtual environment
 cd $PROJDIR
-source ../bin/activate
+source /var/venvs/jamiefraser.me/bin/activate
 
 # Start your Django Unicorn
 # Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)
