@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Jamie Fraser Design</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="static/bootstrap-assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="/static/plugins/fancybox2/source/jquery.fancybox.css" type="text/css" media="screen" rel="stylesheet">
+    <link href="static/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="static/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="static/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="static/plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="static/plugins/Icons/et-line-font/style.css" rel="stylesheet">
+    <link href="static/plugins/animate.css/animate.css" rel="stylesheet">
+    <link href="static/plugins/Remodal/dist/remodal.css" rel="stylesheet">
+    <link href="static/plugins/Remodal/dist/remodal-default-theme.css" rel="stylesheet">
+    <link href="static/css/main.css" rel="stylesheet">
+    <link href="static/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--============================================= -->
+                  <!-- PRELOADER -->
+<!--============================================= -->
+
+    <div class="preloader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+    
+<!--============================================= -->
+                  <!-- HEADER -->
+<!--============================================= -->
+
+    <section class="main-header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="static/img/logo/jflogo.png" class="img-responsive logo" alt="logo"></a>
+                </div>
+                <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                    <div class="col-md-8 col-xs-12 nav-wrap">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#owl-hero" class="page-scroll">Home</a></li>
+                            <li><a href="#services" class="page-scroll">Services</a></li>
+                            <li><a href="#portfolio" class="page-scroll">Works</a></li>
+                            <li><a href="#team" class="page-scroll">About</a></li>
+                            <li><a href="#contact" class="page-scroll">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-media hidden-sm hidden-xs">
+                        <ul class="nav navbar-nav">
+                            <li><a href="https://www.facebook.com/Siikest.Kidd"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/jamie_frahrah/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="http://jamie-fraser.deviantart.com/"><i class="fa fa-deviantart"></i></a></li>
+                            <li><a href="https://github.com/jamie-Fraser"><i class="fa fa-github-alt"></i></a></li>
+                            <li><a href="http://www.snapchat.com/add/effingrawr"><i class="fa fa-snapchat-ghost"></i></a></li>
+                            {% if g.user.is_authenticated %}
+                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="owl-hero" class="owl-carousel owl-theme dark-bg">
+            <div class="item" style="background-image: url(static/img/sliders/piccolo1slide.png)">
+                <div class="caption">
+                    <h6>Illustration / Design / Creativty</h6>
+                    <h1>This is <span>Jamie Fraser Design</span></h1>
+                    <a class="btn btn-transparent myButton">Relax</a><a class="btn btn-light" href="#modal">Enjoy</a>
+                    <div class="remodal" data-remodal-id="modal">
+                        <button data-remodal-action="close" class="remodal-close"></button>
+                        <p><span>If I don't get to relax, neither do you but please still enjoy.</span></p>
+                        <br>
+                        <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(static/img/sliders/piccolo2slide.png)">
+                <div class="caption">
+                    <h6>Illustration / Design / Creativty</h6>
+                    <h1>A Creative <span>Mess</span></h1>
+                    <a class="btn btn-transparent myButton">Relax</a><a class="btn btn-light" href="#modal">Enjoy</a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(static/img/sliders/piccolo5slide.png)">
+                <div class="caption">
+                    <h6>Illustration / Design / Creativty</h6>
+                    <h1>super <span>Fun</span></h1>
+                    <a class="btn btn-transparent myButton">Relax</a><a class="btn btn-light" href="#modal">Enjoy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--============================================= -->
+                  <!-- WELCOME -->
+<!--============================================= -->
+
+    <section id="welcome" class="dark-bg">
+        <div class="container">
+            <h2>Welcome To <span>Jamie Fraser Design</span></h2>
+            <hr class="sep">
+            <p>Make Yourself At Home Don't Be Shy</p>
+            <img class="img-responsive center-block wow fadeInUp logoblack" data-wow-delay=".3s" src="static/img/logo/jflogo.png" alt="logo">
+        </div>
+    </section>
+
+<!--============================================= -->
+                  <!-- SERVICES -->
+<!--============================================= -->
+
+    <section id="services">
+        <div class="container">
+            <h2>What I can do for you</h2>
+            <hr class="sep">
+            <p>I'll do anything for you, but i won't do that</p>
+            <div class="services-box">
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-md-4">
+                        <div class="media-left"><span class="icon-mobile"></span></div>
+                        <div class="media-body">
+                            <h3>Sweet Designs</h3>
+                            <p>I mainly draw portraits but am well equipped to draw many other things, i like to keep it simple.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media-left"><span class="fa fa-tv"></span></div>
+                        <div class="media-body">
+                            <h3>Illustrator</h3>
+                            <p>I use Illustrator for cleaning up of the drawings i do on my tablet</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media-left"><span class="fa fa-keyboard-o"></span></div>
+                        <div class="media-body">
+                            <h3>Jquery &amp; Python</h3>
+                            <p>I've been using Jquery and Python to build this website and have made a few others.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                    <div class="row wow fadeInUp" data-wow-delay=".6s">
+                        <div class="col-md-4">
+                            <div class="media-left"><span class="fa fa-paint-brush"></span></div>
+                            <div class="media-body">
+                                <h3>Old School Art</h3>
+                                <p>I've studied visual art at TAFE and have taught myself a lot aswell.</p>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="media-left"><span class="fa fa-image"></span></div>
+                            <div class="media-body">
+                                <h3>Photoshop</h3>
+                                <p>I love to Photshop and mostly just make ridiculous things</p>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="media-left"><span class="fa fa-laptop"></span></div>
+                            <div class="media-body">
+                                <h3>Web Design</h3>
+                                <p>I made this Website myself and learned very quickly how to do so with HTML, CSS, Jquery, Python and Bootstrap.</p>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+<!--============================================= -->
+                  <!-- PORTFOLIO -->
+<!--============================================= -->
+
+    <section id="portfolio" class="dark-bg">
+        <div class="container">
+            <h2>My Work</h2>
+            <hr class="sep">
+            <p>Here is a gallery of my own works</p>
+        <!-- AUTHENTICATE USER HERE -->
+            {% if g.user.is_authenticated: %}
+                {% include 'flash.html' %}
+              <div class="well">
+                  <form class="form-horizontal" action="" method="post" name="portfolioitem" enctype = "multipart/form-data">
+                      {{ form.hidden_tag() }}
+                      <div class="control-group{% if form.name.errors %} error{% endif %}">
+                          <label class="control-label" for="name">Artwork Name:</label>
+                          <div class="controls">
+                              {{ form.name(size=30, maxlength=140) }}
+                              {% for error in form.errors.name %}
+                                  <span class="help-inline">[{{ error }}]</span><br>
+                              {% endfor %}
+                          </div>
+                      </div>
+                      <div class="control-group{% if form.artwork_path.errors %} error{% endif %}">
+                            <div class="controls">
+                              {{ form.artwork_path() }}
+                            </div>
+                      </div>
+                      <div class="control-group{% if form.description.errors %} error{% endif %}">
+                          <label class="control-label" for="description">Description:</label>
+                          <div class="controls">
+                              {{ form.description(size=30, maxlength=140) }}
+                              {% for error in form.errors.description %}
+                                  <span class="help-inline">[{{ error }}]</span><br>
+                              {% endfor %}
+                          </div>
+                      </div>
+                      <div class="control-group">
+                          <div class="controls">
+                              <input class="btn btn-primary" type="submit" value="Submit">
+                          </div>
+                    </div>
+                  </form>
+              </div>
+            {% endif %}
+            <!-- IMAGES DISPLAY HERE -->
+        </div>
+        <div class="container-fluid dark-bg">
+            <div class="portfolio">
+            {% for item in items %}
+                <div class="harambe">
+                    <figure class="artwork">
+                      <a class="fancybox" rel="group" href="/static/img/artwork/{{ item.artwork_path }}" title="{{ item.name|safe }}"><img class="port-img" src="/static/img/artwork/{{ item.artwork_path }}"></a>
+                      <figcaption>
+                        <h2 class='img-title'>{{ item.name|safe }}</h2>
+                        <p class='img-txt'>{{ item.description|safe }}</p>
+                        <a href="{{ url_for('view_artwork', id=item.id) }}"></a>
+                      </figcaption>
+                      {% if g.user.is_authenticated: %}
+                      <div>
+                          <a class="delete-artwork" href="{{ url_for('delete_portfolioitem', id=item.id) }}">{{ ('Delete') }}
+                          </a>
+                      </div>
+                      {% endif %}
+                    </figure>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+   
+<!--============================================= -->
+                  <!-- TEAM -->
+<!--============================================= -->
+
+    <section id="team">
+        <div>
+            <h2>My Team, <em>it's literally just me</em></h2>
+            <hr class="sep">
+            <p>The Designer, Cheif, Alpha, The Main Guy</p>
+            <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="team">
+                    <img class="img-responsive center-block" src="static/img/portfolio/me.png">
+                        <img class="img-responsive center-block me" src="static/img/team/me1.png">
+                        <h4>Jamie Fraser</h4>
+                        <p>Developer</p>
+                        <div class="team-social-icons">
+                            <a href="https://www.facebook.com/Siikest.Kidd"><i class="fa fa-facebook fa-2x"></i></a>
+                            <a href="https://www.instagram.com/jamie_frahrah/"><i class="fa fa-instagram fa-2x"></i></a>
+                            <a href="http://jamie-fraser.deviantart.com/"><i class="fa fa-deviantart fa-2x"></i></a>
+                            <a href="https://github.com/jamie-Fraser"><i class="fa fa-github-alt fa-2x"></i></a>
+                            <a href="http://www.snapchat.com/add/effingrawr"><i class="fa fa-snapchat-ghost fa-2x"></i></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+<!--============================================= -->
+                  <!-- FUN FACTS -->
+<!--============================================= -->
+
+    <section id="fun-facts" class="dark-bg">
+        <div class="container">
+            <h2>Some Fun Facts </h2>
+            <hr class="sep">
+            <p>Fun Facts</p>
+            <div class="row wow fadeInUp" data-wow-delay=".3s">
+                <div class="col-lg-3">
+                    <span class="fa fa-frown-o"></span>
+                    <h2 class="number timer">0</h2>
+                    <h4>Days Without Incident</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="fa fa-gamepad"></span>
+                    <h2 class="number timer">2000</h2>
+                    <h4>Hours Spent On Xbox</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="fa fa-dashboard"></span>
+                    <h2 class="number timer">9001</h2>
+                    <h4>Power Level</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="icon-documents"></span>
+                    <h2 class="number timer">78535767</h2>
+                    <h4>Times copied and pasted</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--============================================= -->
+                  <!-- CONTACT -->
+<!--============================================= -->
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <hr class="sep">
+            <p>Get In Touch</p>
+            <div class="col-md-6 col-md-offset-3 wow fadeInUp" data-wow-delay=".3s">
+                <form class="form-horizontal" action="" method="post" name="contactform" enctype = "multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div class="control-group{% if contactform.name.errors %} error{% endif %}">
+                    <label class="control-label" for="name">Name:</label>
+                    <div class="controls">
+                        {{ contactform.name(size=30, maxlength=140) }}
+                        {% for error in contactform.errors.name %}
+                            <span class="help-inline">[{{ error }}]</span><br>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="control-group{% if contactform.email.errors %} error{% endif %}">
+                    <label class="control-label" for="email">Email:</label>
+                    <div class="controls">
+                        {{ contactform.email(size=30, maxlength=140) }}
+                        {% for error in contactform.errors.email %}
+                            <span class="help-inline">[{{ error }}]</span><br>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="control-group{% if contactform.subject.errors %} error{% endif %}">
+                    <label class="control-label" for="subject">subject:</label>
+                    <div class="controls">
+                        {{ contactform.subject(size=30, maxlength=140) }}
+                        {% for error in contactform.errors.subject %}
+                            <span class="help-inline">[{{ error }}]</span><br>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="control-group{% if contactform.message.errors %} error{% endif %}">
+                    <label class="control-label" for="message">Message:</label>
+                    <div class="controls">
+                        {{ contactform.message(size=30, maxlength=140) }}
+                        {% for error in contactform.errors.message %}
+                            <span class="help-inline">[{{ error }}]</span><br>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </div>
+                </div> 
+                </form>
+            </div>
+        </div>
+    </section>
+
+<!--============================================= -->
+                  <!-- FOOTER -->
+<!--============================================= -->
+
+    <footer class="dark-bg">
+        <div class="container">
+            <h1>Jameh</h1>
+            <div class="social">
+                <a href="https://www.facebook.com/Siikest.Kidd"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="https://www.instagram.com/jamie_frahrah/"><i class="fa fa-instagram fa-2x"></i></a>
+                <a href="http://jamie-fraser.deviantart.com/"><i class="fa fa-deviantart fa-2x"></i></a>
+                <a href="https://github.com/jamie-Fraser"><i class="fa fa-github-alt fa-2x"></i></a>
+                <a href="http://www.snapchat.com/add/effingrawr"><i class="fa fa-snapchat-ghost fa-2x"></i></a>
+            </div>
+            <a class="login" href="/login"><h6>&copy; 2016</h6></a>
+        </div>
+    </footer>
+    
+<!--============================================= -->
+                  <!-- SCRIPTS -->
+<!--============================================= -->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/bootstrap-assets/js/bootstrap.min.js"></script>
+    <script src="static/js/custom.js"></script>
+    <!-- JS PLUGINS -->
+    <script type="text/javascript" src="/static/plugins/fancybox2/source/jquery.fancybox.pack.js"></script>
+    <script src="static/js/flowtype.js"></script>
+    <script src="static/js/masonry.pkgd.min.js"></script>
+    <script src="static/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="static/js/jquery.easing.min.js"></script>
+    <script src="static/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="static/plugins/countTo/jquery.countTo.js"></script>
+    <script src="static/plugins/inview/jquery.inview.min.js"></script>
+    <script src="static/plugins/Lightbox/dist/js/lightbox.min.js"></script>
+    <script src="static/plugins/WOW/dist/wow.min.js"></script>
+    <script src="static/plugins/raptorize/jquery.raptorize.1.0.js"></script>
+    <script src="static/plugins/Remodal/dist/remodal.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".fancybox").fancybox({
+          helpers	: {
+              title	: {
+                type: 'inside'
+              }
+          }
+        });
+      });
+    </script>
+</body>
+
+</html>

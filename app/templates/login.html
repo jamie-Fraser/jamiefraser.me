@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Jamie Fraser Design</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="static/bootstrap-assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="static/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="static/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="static/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="static/plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="static/plugins/Icons/et-line-font/style.css" rel="stylesheet">
+    <link href="static/plugins/animate.css/animate.css" rel="stylesheet">
+    <link href="static/css/main.css" rel="stylesheet">
+    <link href="static/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    {% include 'flash.html' %}
+    <div class="well">
+        <h3>Please Sign In</h3>
+        <form class="form" action="/login" method="post" name="login">
+            {{ form.hidden_tag() }}
+                <div class="control-group{% if form.nickname.errors %} error{% endif %}">
+                    <label class="control-label" for="nickname">Username:</label>
+                    <div class="controls">
+                        {{ form.nickname(size=80, class="span4") }}
+                        {% for error in form.nickname.errors %}
+                            <span class="help-inline">[{{ error }}]</span><br>
+                        {% endfor %}
+                <div class="control-group{% if form.password.errors %} error{% endif %}">
+                    <label class="control-label" for="password">Password:</label>
+                        {{ form.password(size=80, class="span4") }}
+                        {% for error in form.password.errors %}
+                            <span class="help-inline">[{{ error }}]</span><br>
+                        {% endfor %}
+                    </div>
+                  </div>
+                  <div class="control-group">
+                      <div class="controls">
+                          <label class="checkbox" for="remember_me">
+                              {{ form.remember_me }} Remember Me
+                          </label>
+                      </div>
+                  </div>
+                  <div class="control-group">
+                      <div class="controls">
+                          <input class="btn btn-primary" type="submit" value="Sign In">
+                      </div>
+                  </div>
+              </div>
+        </form>
+        </div>
+</body>
+</html>

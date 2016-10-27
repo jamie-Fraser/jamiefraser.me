@@ -1,0 +1,50 @@
+{% block js %}
+<script src="/static/js/jssocials.js"></script>
+<script src="/static/js/jssocials.min.js"></script>
+{% endblock %}
+{% block css %}
+<link href="/static/css/jssocials.css" rel="stylesheet">
+<link href="/static/css/jssocials-theme-minima.css" rel="stylesheet">
+<link href="/static/vendor/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+<div class="artwork">
+
+        <h1>{{ item.name|safe }}</h1>
+        <p>{{ item.description|safe }}</p>
+        <a href="{{ url_for('view_artwork', id=item.id) }}"><img src="/static/img/artwork/{{ item.artwork_path }}"></a>
+        <div id="disqus_thread"></div>
+        {% if g.user.is_authenticated: %}
+        <div><a class="delete-artwork" href="{{ url_for('delete_portfolioitem', id=item.id) }}">{{ ('Delete') }}</a>
+        {% endif%}
+        <!-- START: Livefyre Embed -->
+        <div id="livefyre-comments"></div>
+        <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+        <script type="text/javascript">
+        (function () {
+            var articleId = fyre.conv.load.makeArticleId(null);
+            fyre.conv.load({}, [{
+                el: 'livefyre-comments',
+                network: "livefyre.com",
+                siteId: "383889",
+                articleId: articleId,
+                signed: false,
+                collectionMeta: {
+                    articleId: articleId,
+                    url: fyre.conv.load.makeCollectionUrl(),
+                }
+            }], function() {});
+        }());
+        </script>
+        <!-- END: Livefyre Embed -->
+        <div id="share">
+        </div>
+        <div><a class="back" href="{{ url_for('index') }}">&#8606; Back
+        </div>
+        </div>
+        
+</div>
+<script>
+        $("#share").jsSocials({
+            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+        });
+</script>
